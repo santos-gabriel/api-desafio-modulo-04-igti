@@ -11,8 +11,10 @@ import { db } from './models/index.js';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+    console.log('connected was success!')
   } catch (error) {
     process.exit();
+    console.log('failureto connected');
   }
 })();
 
@@ -23,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'http://localhost:8080',
+    origin: 'https://front-igti-modulo-04.herokuapp.com/',
   })
 );
 

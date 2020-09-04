@@ -17,14 +17,14 @@ const create = async (req, res) => {
 };
 
 const findAll = async (req, res) => {
-  // const name = req.query.name;
+  const name = req.query.name;
   //condicao para o filtro no findAll
-  /*var condition = name
+  var condition = name
     ? { name: { $regex: new RegExp(name), $options: 'i' } }
-    : {};*/
+    : {};
 
   try {
-    const grades = await gradeModel.find({});
+    const grades = await gradeModel.find(condition);
     res.send(grades);
     logger.info(`GET /grade`);
   } catch (error) {
