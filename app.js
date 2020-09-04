@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'https://front-igti-modulo-04.herokuapp.com/',
+    origin: 'https://front-igti-modulo-04.herokuapp.com',
   })
 );
 
